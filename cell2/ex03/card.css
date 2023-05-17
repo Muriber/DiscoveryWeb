@@ -1,0 +1,56 @@
+body {
+	text-align: center;
+}
+.card {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.g_table {
+	margin: auto;
+}
+
+.photo {
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+ 	height: 20vh;
+}
+
+.login {
+	font-weight: bold;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: larger;
+}
+
+.description {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#data {
+	font-size: x-large;
+}
+
+#loc {
+	font-size: large;
+	color: grey;
+}
+
+.social {
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 2vh;
+	width: 2vh;	
+	align-items: center;
+}
+
+#boton {
+	background-color: black;
+	background-position: center;
+ 	background-size: cover;
+	width: 100%;
+ 	height: 5vh;
+	color: white;
+	font-size: larger;
+}

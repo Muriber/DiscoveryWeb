@@ -1,0 +1,50 @@
+/*Estilo General para la web*/
+body {
+	background-color: black;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*Estilo para los parallax*/
+.container {
+	height: 100vh; /*Cubre el 100% de la parte visible*/
+	overflow: hidden; /*El contenido es recortado y no se muestran barras de posición*/
+	overflow-y: auto; /*s/navegador provee barra de desplazamiento si existe contenido excedente*/
+	perspective: 1px;
+}
+section {
+	background-size: cover; /*Cubre el 100% de la parte visible*/
+	color: white;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/*Estilo para el background del parallax*/
+.parallax-bg {
+	background-position: center center;
+	transform: translateZ(-0.5px) scale(2);
+	background-size: cover;
+	z-index: -1;
+	height: 50vh;
+}
+/*Estilo para el contenido parallax*/
+.parallax-content {
+	z-index: -1;
+	transform: translateY(-25vh) translateZ(0px) scale(1);
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: center;
+}
+/*Estilo para la sección no parallax*/
+.no-parallax {
+	height: 50vh;
+}
+/*Estilo para contenido no parallax*/
+.no-parallax-content {
+	text-align: center;
+	padding: 30px;
+}
+
+.-npbg {
+	/* background: linear-gradient(0deg, rgb(0, 36, 22) 0%, rgb(106, 159, 66) 0%, rgb(139, 60, 18) 100%); */
+	background-color: black;
+}
