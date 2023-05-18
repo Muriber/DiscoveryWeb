@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Balloon</title>
+	<link rel="stylesheet" href="styles.css">
+	
+</head>
+<body id="out">
+	<div id="balloon" onclick="inflate(), color_i()" onmouseout="deflate();">
+
+	</div>
+	<script>
+		//const data_j = document.getElementById('balloon');
+		const data_j = document.querySelector("#balloon");
+		console.log("kkfdjsakfjalkfj");
+		console.log("kkfdjsakfjalkfj");
+		console.log(data_j.clientWidth);
+		console.log(document.getElementById('balloon').style.width);
+
+		function inflate(){
+			var size = document.getElementById('balloon').clientWidth;
+			if(size <= 410)
+			size += 10;
+			else
+			size = 200;
+			document.getElementById('balloon').style.width =  size+'px';
+			console.log(document.getElementById('balloon').style.width);
+			document.getElementById('balloon').style.height = size+'px';
+		}
+		function deflate(){
+			var size = document.getElementById('balloon').clientWidth;
+			if (size >= 205)
+			size -= 5;
+			document.getElementById('balloon').style.width =  size+'px';
+			document.getElementById('balloon').style.height = size+'px';
+		}
+		function color_i(){
+			console.log("algooooo");
+			var current_color = data_j.style.backgroundColor;
+			console.log(current_color);
+			console.log("color");
+			if (data_j.style.backgroundColor == 'red' || data_j.style.backgroundColor == ""){
+				console.log(current_color);
+				data_j.style.backgroundColor = 'green';
+			}
+			else if (data_j.style.backgroundColor == 'green')
+				data_j.style.backgroundColor = 'blue';
+			else if (data_j.style.backgroundColor == 'blue' || (data_j.style.backgroundColor == 'red' && data.style.width == 210))
+				data_j.style.backgroundColor = 'red';
+		}
+	</script>
+</body>
+</html>

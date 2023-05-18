@@ -8,7 +8,7 @@ body {
 	height: 100vh; /*Cubre el 100% de la parte visible*/
 	overflow: hidden; /*El contenido es recortado y no se muestran barras de posición*/
 	overflow-y: auto; /*s/navegador provee barra de desplazamiento si existe contenido excedente*/
-	perspective: 1px;
+	perspective: 3px;
 }
 section {
 	background-size: cover; /*Cubre el 100% de la parte visible*/
@@ -45,6 +45,6 @@ section {
 }
 
 .-npbg {
-	/* background: linear-gradient(0deg, rgb(0, 36, 22) 0%, rgb(106, 159, 66) 0%, rgb(139, 60, 18) 100%); */
-	background-color: black;
-}
+ background: linear-gradient(90deg, rgb(0, 36, 22) 0%, rgb(106, 159, 66) 0%, rgb(139, 60, 18) 100%);
+/* 	background-color: black;
+ */}
