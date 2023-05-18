@@ -45,6 +45,6 @@ section {
 }
 
 .-npbg {
- background: linear-gradient(90deg, rgb(0, 36, 22) 0%, rgb(106, 159, 66) 0%, rgb(139, 60, 18) 100%);
-/* 	background-color: black;
- */}
+ /* background: linear-gradient(90deg, rgb(0, 36, 22) 0%, rgb(106, 159, 66) 0%, rgb(139, 60, 18) 100%); */
+	background-color: black;
+}
