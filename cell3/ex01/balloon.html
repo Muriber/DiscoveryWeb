@@ -17,52 +17,52 @@
 </head>
 <body id="out">
 <div id="balloon" onclick="inflate()" onmouseout="deflate();">
-	</div>
-	<script>
-		const data_j = document.getElementById("balloon");
-		function inflate(){
-			var size = document.getElementById('balloon').clientWidth;
-			if(size <= 410)
-			size += 10;
-			else
-				size = 200;
-			document.getElementById('balloon').style.width =  size+'px';
-			console.log(document.getElementById('balloon').style.width);
-			document.getElementById('balloon').style.height = size+'px';
-			color_i();
+</div>
+<script>
+	const data_j = document.getElementById("balloon");
+	function inflate(){
+		var size = document.getElementById('balloon').clientWidth;
+		if(size <= 410)
+		size += 10;
+		else
+			size = 200;
+		document.getElementById('balloon').style.width =  size+'px';
+		console.log(document.getElementById('balloon').style.width);
+		document.getElementById('balloon').style.height = size+'px';
+		color_i();
+	}
+	function deflate(){
+		var size = document.getElementById('balloon').clientWidth;
+		if (size >= 205)
+		{
+			size -= 5;
+			color_d();
 		}
-		function deflate(){
-			var size = document.getElementById('balloon').clientWidth;
-			if (size >= 205)
-			{
-				size -= 5;
-				color_d();
-			}
-			document.getElementById('balloon').style.width =  size+'px';
-			document.getElementById('balloon').style.height = size+'px';
+		document.getElementById('balloon').style.width =  size+'px';
+		document.getElementById('balloon').style.height = size+'px';
+	}
+	function color_i(){
+		var current_color = data_j.style.backgroundColor;
+		if (data_j.style.backgroundColor == 'red' || data_j.style.backgroundColor == ""){
+			console.log(current_color);
+			data_j.style.backgroundColor = 'green';
 		}
-		function color_i(){
-			var current_color = data_j.style.backgroundColor;
-			if (data_j.style.backgroundColor == 'red' || data_j.style.backgroundColor == ""){
-				console.log(current_color);
-				data_j.style.backgroundColor = 'green';
-			}
-			else if (data_j.style.backgroundColor == 'green')
-				data_j.style.backgroundColor = 'blue';
-			else if (data_j.style.backgroundColor == 'blue' || data_j.style.width == 200)
-				data_j.style.backgroundColor = 'red';
-			if (document.getElementById('balloon').style.width == '200px')
-				data_j.style.backgroundColor = 'red';
-			console.log(document.getElementById('balloon').style.backgroundColor);
-		}
-		function color_d(){
-			if (data_j.style.backgroundColor == 'red')
-				data_j.style.backgroundColor = 'blue';
-			else if (data_j.style.backgroundColor == 'green')
-				data_j.style.backgroundColor = 'red';
-			else if (data_j.style.backgroundColor == 'blue')
-				data_j.style.backgroundColor = 'green';
-		}
-	</script>
+		else if (data_j.style.backgroundColor == 'green')
+			data_j.style.backgroundColor = 'blue';
+		else if (data_j.style.backgroundColor == 'blue' || data_j.style.width == 200)
+			data_j.style.backgroundColor = 'red';
+		if (document.getElementById('balloon').style.width == '200px')
+			data_j.style.backgroundColor = 'red';
+		console.log(document.getElementById('balloon').style.backgroundColor);
+	}
+	function color_d(){
+		if (data_j.style.backgroundColor == 'red')
+			data_j.style.backgroundColor = 'blue';
+		else if (data_j.style.backgroundColor == 'green')
+			data_j.style.backgroundColor = 'red';
+		else if (data_j.style.backgroundColor == 'blue')
+			data_j.style.backgroundColor = 'green';
+	}
+</script>
 </body>
 </html>

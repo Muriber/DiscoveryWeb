@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calc</title>
+	<style>
+		div {
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ 			font-size: large;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<input id="first_n" type="text">
+		<select name="Operator" id="op">
+			<option value="sumar">+</option>
+			<option value="restar">-</option>
+			<option value="multiplicar">*</option>
+			<option value="dividir">/</option>
+			<option value="modulo">%</option>
+		</select>
+		<input id="second_n" type="text">
+		<button id="boton">Try me!!</button>
+	</div>
+<script>
+	setTimeout(() => {
+		console.log("Please use me...");
+		alert("Please use me...")
+	}, 30000);
+	document.getElementById('boton').addEventListener("click", function(){
+		const n1 = document.getElementById('first_n').value;
+		const n2 = document.getElementById('second_n').value;
+		const oper = document.getElementById('op').value;
+		
+		var num1=parseInt(n1);
+		var num2=parseInt(n2);
+		var res=0;
+		console.log(num2);
+		if (num1>=0 && num2>= 0)
+		{
+			switch (oper){
+				case "sumar":
+					res=num1+num2;
+					break;
+				case"restar":
+					res=num1-num2;
+					break;
+				case"multiplicar":
+					res=num1*num2;
+					break;
+				case"dividir":
+					if (num2==0)
+						alert("It's over 9000!");
+						console.log("It's over 9000!");
+						return;
+					res=num1/num2;
+					break;
+				case"modulo":
+				if (num2==0)
+						alert("It's over 9000!");
+						console.log("It's over 9000!");
+						return;
+					res=num1%num2;
+					break;
+				}
+			alert(res);
+			console.log(res);
+		}
+		else
+			alert("Error :(")
+	});
+	</script>
+</body>
+</html>
